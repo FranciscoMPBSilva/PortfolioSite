@@ -1,7 +1,123 @@
 .AboutMe {
   height: 150vh;
-  background-image: url('../Imagens/Captura\ de\ ecrã\ 2025-07-08\ 101321.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  padding-top: 5%;
+  font-family: 'Quicksand';
 }
+
+.container-aboutme {
+  color: rgb(0, 0, 0);
+  font-family: 'Quicksand';
+  margin: auto;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: center;
+  text-align: center; 
+  width: 100%;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 50%;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translate(-100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+
+.aboutTitle {
+  color: #D9AD5B;
+  font-size: 80px;
+}
+
+.subTitle {
+  font-size: 40px;
+  font-weight: bolder;
+  margin: 1rem 0;
+}
+
+.paragraph {
+  margin: 1rem 0;
+  font-size: 20px;
+}
+
+.description {
+  font-size: 30px;
+  display: flex;
+  width: fit-content;
+  margin: 0 auto;
+  justify-content: center;
+  padding-top: 3%;
+
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 30%;
+}
+
+.pontos {
+  color: #e0ab47;
+}
+
+.tag-list {
+  width: 50rem;
+  font-family: 'Quicksand';
+  position: relative;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: 2%;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0 cover 20%;
+}
+
+.inner {
+  width: max-content;
+  display: flex;
+  gap: 2rem;
+  animation: loop 15s linear infinite;
+}
+
+.tag { 
+  display: flex; 
+  align-items: center;
+  gap: 0 0.2rem;
+  color:#ffffff;
+  font-size: 1rem;
+  background-color: #D9AD5B;
+  padding: 0.7rem 1rem; 
+  border-radius: 0.4rem;
+  box-shadow:
+    0 0.1rem 0.2rem #ffffff33,
+    0 0.1rem 0.5rem #ffffff4d,
+    0 0.2rem 1.5rem #00000066;
+}
+
+.inner:hover {
+  animation-play-state: paused;
+  cursor: pointer;
+}
+
+.fade {
+  position: absolute;
+  background: linear-gradient(90deg, #ffffff, transparent 30%, transparent 70%, #ffffff);
+  inset: 0;
+  pointer-events: none;
+}
+
+@keyframes loop {
+  0% {
+    transform: translate(0);
+  }
+
+  100% {
+    transform: translate(-50%);
+  }
+}
+
+

@@ -32,17 +32,19 @@ html {
   width: 100%;
   height: 10vh;
   z-index: 1000;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(250, 249, 249, 0.9);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0.9rem 4%;
+  border-bottom: 3px solid rgba(230, 230, 230, 0.199)
 }
 
 nav a:hover,
 nav a.active{
-  color: white;
-  border-bottom: 3px solid rgb(201, 201, 201);
+  color: #D9AD5B;
+  border-bottom: 3px solid #D9AD5B;
+  padding-bottom: 10px;
 }
 
 .right {
@@ -60,10 +62,10 @@ nav a.active{
 }
 
 .itens_nav li {
-  color: #D9AD5B;
+  color: #000000;
   font-family: 'Quicksand';
   font-size: 20px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .itens_nav a {
