@@ -7,6 +7,7 @@
   <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="../css/Hero.css" />
+  <link rel="stylesheet" href="../css/AboutMe.css" />
 </head>
 
 <body>
@@ -17,10 +18,10 @@
         <div class="right">
             <nav class="itens_nav">
                 <ul>
-                  <li><a href="#hero" class="active">Home</a></li>
-                  <li><a href="#aboutme">About me</a></li>
-                  <li><a href="#experience">Experience</a></li>
-                  <li><a href="#project">Projects</a></li>
+                  <li><a href="#hero" class="nav-link">Home</a></li>
+                  <li><a href="#aboutme" class="nav-link">About me</a></li>
+                  <li><a href="#experience" class="nav-link">Experience</a></li>
+                  <li><a href="#project" class="nav-link">Projects</a></li>
                 </ul>
             </nav>
             <ul class="icons">
@@ -29,11 +30,11 @@
                 <li><a href="mailto:franciscosilvasnd@gmail.com"><img src="../Imagens/281769.png" alt="Icon 3"></a></li>
             </ul>
         </div>
-        <hr class="dividor">
+        <!--<hr class="dividor">-->
     </div>
   </header>
 
-  <section class="HeroPage">
+  <section class="HeroPage" id="hero">
     <div class="hero_container">
       <div class="container">
           <h2 class="h2_apresentation esp fade-in">Hey <span class="cor_span">,</span> i'm Francisco<span class="cor_span">.</span></h2>
@@ -62,7 +63,8 @@
     <div>
     </div>
   </section>
-  <section class="AboutMe">
+
+  <section class="AboutMe" id="aboutme">
     <div>
       <h1>ABOUT ME</h1>
       <h3>I’m a Software Engineer focused on building creative, clean, and <br>
@@ -86,5 +88,7 @@
   <footer>
     
   </footer>
+
+  <script src="../JavaScript/script.js"></script>
 </body>
 </html>

@@ -1,3 +1,12 @@
+.HeroPage {
+  background-image: url(../Imagens/MainPage.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 125vh;
+  padding-top: 10%;
+}
+
 .cor_span {
   color: #D9AD5B;
 }
@@ -55,7 +64,7 @@
   overflow: hidden;   
   white-space: nowrap;
   animation:
-    typing 2s steps(45, end),
+    typing 1.5s steps(50, end),
     blink-caret .75s step-end infinite;
 }
 

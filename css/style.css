@@ -1,10 +1,12 @@
-body {
-  background-image: url(../Imagens/MainPage.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  min-height: 100vh;
-  padding-top: 10%;
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--scroll-padding, 5rem);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .FS {
@@ -27,7 +29,8 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 92%;
+  width: 100%;
+  height: 10vh;
   z-index: 1000;
   background-color: rgba(0, 0, 0, 0.8);
   display: flex;
