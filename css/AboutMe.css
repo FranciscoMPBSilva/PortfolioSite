@@ -1,7 +1,11 @@
 .AboutMe {
-  height: 150vh;
-  padding-top: 5%;
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 6%;
   font-family: 'Quicksand';
+  width: 100%;
+  position: relative;
+  overflow: visible;
 }
 
 .container-aboutme {
@@ -13,6 +17,8 @@
   justify-content: center;
   text-align: center; 
   width: 100%;
+  height: auto;
+
   animation: appear linear;
   animation-timeline: view();
   animation-range: entry 0 cover 50%;
@@ -21,43 +27,42 @@
 @keyframes appear {
   from {
     opacity: 0;
-    transform: translate(-100px);
+    transform: translateY(-100px);
   }
 
   to {
     opacity: 1;
-    transform: translate(0);
+    transform: translateY(0);
   }
 }
 
 
 .aboutTitle {
   color: #D9AD5B;
-  font-size: 80px;
+  font-size: clamp(2rem, calc(4vw + 0.5rem), 5rem);
 }
 
 .subTitle {
-  font-size: 40px;
+  font-size: clamp(1rem, calc(2vw + 0.4rem), 2rem);
   font-weight: bolder;
   margin: 1rem 0;
+  color: rgb(0, 0, 0);
 }
 
 .paragraph {
   margin: 1rem 0;
-  font-size: 20px;
+  font-size: clamp(0.5rem, calc(1vw + 0.5rem), 1.4rem);
+  color: rgb(0, 0, 0);
 }
 
 .description {
-  font-size: 30px;
+  font-size: clamp(1rem, calc(1vw + 1rem), 2.5rem);
+  color: rgb(0, 0, 0);
   display: flex;
   width: fit-content;
   margin: 0 auto;
   justify-content: center;
-  padding-top: 3%;
-
-  animation: appear linear;
-  animation-timeline: view();
-  animation-range: entry 0 cover 30%;
+  padding-top: 2%;
 }
 
 .pontos {
@@ -66,36 +71,84 @@
 
 .tag-list {
   width: 50rem;
-  font-family: 'Quicksand';
   position: relative;
   overflow: hidden;
   margin: 0 auto;
   margin-top: 2%;
-  animation: appear linear;
-  animation-timeline: view();
-  animation-range: entry 0 cover 20%;
 }
 
 .inner {
   width: max-content;
   display: flex;
-  gap: 2rem;
-  animation: loop 15s linear infinite;
+  gap: 1.5rem;
+  animation: loop 8s linear infinite;
 }
 
-.tag { 
-  display: flex; 
+.tag {
+  width: 100%;
+  height: auto;
+  display: flex;
   align-items: center;
-  gap: 0 0.2rem;
-  color:#ffffff;
-  font-size: 1rem;
-  background-color: #D9AD5B;
+  justify-content: center;
   padding: 0.7rem 1rem; 
   border-radius: 0.4rem;
-  box-shadow:
-    0 0.1rem 0.2rem #ffffff33,
-    0 0.1rem 0.5rem #ffffff4d,
-    0 0.2rem 1.5rem #00000066;
+}
+
+.tag img {
+  width: 4.5rem; 
+  height: auto;
+}
+
+@media (max-width: 850px) {
+  .tag img {
+    width: 3rem; 
+    height: auto;
+  }
+
+  .tag-list {
+    width: 25rem;
+  }
+
+  .AboutMe {
+    padding-top: 10%;
+  }
+
+  .description {
+    padding-top: 10%;
+  }
+
+  .paragraph {
+    padding-top: 0%;
+  }
+
+  .inner {
+    width: max-content;
+    display: flex;
+    gap: 0.75rem;
+    animation: loop 15s linear infinite;
+  }
+}
+
+@media (max-width: 480px) {
+  .tag img {
+    width: 2rem; 
+    height: auto;
+  }
+
+  .tag-list {
+    width: 15rem;
+  }
+
+  .AboutMe {
+    padding-top: 10%;
+  }
+
+  .inner {
+    width: max-content;
+    display: flex;
+    gap: 0.5rem;
+    animation: loop 15s linear infinite;
+  }
 }
 
 .inner:hover {

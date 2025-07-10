@@ -13,9 +13,9 @@ html {
   display: inline-block;
   color: #D9AD5B;
   font-family: 'Quicksand';
-  font-size: 30px;
+  font-size: clamp(1rem, calc(1vw + 0.5rem), 1.8rem);
   font-weight: bold;
-  position: relative;
+  position: absolute;
   transition: transform 0.4s ease, color 0.4s ease;
   overflow: hidden;
 }
@@ -30,9 +30,10 @@ html {
   top: 0;
   left: 0;
   width: 100%;
-  height: 10vh;
+  height: auto;
+  min-height: 10vh;
   z-index: 1000;
-  background-color: rgba(250, 249, 249, 0.9);
+  background-color: rgba(39, 39, 39, 0.9);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -40,10 +41,14 @@ html {
   border-bottom: 3px solid rgba(230, 230, 230, 0.199)
 }
 
-nav a:hover,
+nav a:hover {
+  border-bottom: 0.2rem solid #D9AD5B;
+  padding-bottom: 10px;
+}
+
 nav a.active{
   color: #D9AD5B;
-  border-bottom: 3px solid #D9AD5B;
+  border-bottom: 0.2rem solid #D9AD5B;
   padding-bottom: 10px;
 }
 
@@ -51,6 +56,9 @@ nav a.active{
   display: flex;
   align-items: center;
   gap: 5rem;
+  position: absolute;
+  right: 0;
+  margin-right: 2%;
 }
 
 .itens_nav ul {
@@ -59,12 +67,13 @@ nav a.active{
   list-style: none; 
   margin: 0;
   padding: 0;
+  right: 0;
 }
 
 .itens_nav li {
-  color: #000000;
+  color: #ffffff;
   font-family: 'Quicksand';
-  font-size: 20px;
+  font-size: clamp(0.5rem, calc(1vw + 0.5rem), 1.2rem);
   font-weight: 600;
 }
 
@@ -82,7 +91,7 @@ nav a.active{
 }
 
 .icons img {
-  width: 30px; 
+  width: clamp(1.3rem, calc(1vw + 0.5rem), 2rem);; 
   height: auto;  
 }
 
@@ -104,6 +113,53 @@ nav a.active{
   height: 4px;
   background-color: #D9AD5B;
   border: none;
+}
+
+@media (max-width: 1280px) {
+  .itens_nav ul {
+    gap: 3rem; 
+  }
+
+  .right {
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .itens_nav ul {
+    gap: 2rem; 
+  }
+
+  .right {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .itens_nav ul {
+    gap: 2rem; 
+  }
+
+  .right {
+    gap: 2rem;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 0.75rem;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D9AD5B;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #d39a31;
 }
 
 

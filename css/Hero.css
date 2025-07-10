@@ -1,7 +1,13 @@
 .HeroPage {
-  
-  height: 125vh;
-  padding-top: 10%;
+  min-height: 110vh;
+  background-color: #1f1f1f;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 10rem;
+  overflow: hidden;
 }
 
 .cor_span {
@@ -9,20 +15,21 @@
 }
 
 .container {
+  flex: 1;
   color: rgb(0, 0, 0);
+  max-width: 800px;
+  height: auto;
   font-family: 'Quicksand';
-  margin-left: 5%;
   display: flex;
   flex-direction: column;
+  position: relative;
+  z-index: 1;
 }
 
 .container p {
-  font-size: 25px;
+  font-size: clamp(1rem, calc(1vw + 0.5rem), 1.5rem);
   margin: 1rem 0;
-}
-
-.container h1 {
-  margin: 0rem 0;
+  color: white;
 }
 
 .container .software {
@@ -77,27 +84,35 @@
 
 .hero_container {
   display: flex;
-  gap: 20rem;
+  justify-self: space-between;
+  align-items: center;
+  max-width: 1920px;
+  width: 100%;
 }
 
 .h2_apresentation {
-  font-size: 40px;
+  font-size: clamp(1.65rem, calc(3vw + 0.5rem), 2.5rem);
+  color: white;
 }
 
 .h1_apresentation {
-  font-size: 80px;
+  color: white;
+  font-size: clamp(2.8rem, calc(4vw + 0.5rem), 5rem);
 }
 
 .my_img {
-  width: min(600px, 90%);
+  margin-left: auto;
+  display: block;
+  max-width: 100%;
   height: auto;
+  z-index: 0;
 }
 
 .animbar {
   display: inline-block;
   width: 2px;           
-  height: 80px;         
-  background-color: rgba(0, 0, 0, 0.699);
+  height: clamp(2.8rem, calc(4vw + 0.5rem), 5rem);         
+  background-color: rgba(255, 255, 255, 0.699);
   animation: blink 1s step-start infinite;
   vertical-align: bottom;
   font-family: 'Quicksand';
@@ -118,7 +133,7 @@
   display: flex;
   align-items: center;  
   gap: 7rem;            
-  margin: 0rem 0;       
+  margin-top: 7rem;       
 }
 
 .discoverWrapper {
@@ -141,8 +156,9 @@
 }
 
 .arrow {
-  font-size: 30px;
+  font-size: clamp(1rem, calc(1vw + 1rem), 2rem);
   padding-bottom: 2%;
+  color: white;
 }
 
 .underline {
@@ -165,15 +181,14 @@
 .aboutmeButton {
   position: relative;   
   overflow: hidden;   
-  width: 235px;
-  height: 50px;
+  width: clamp(13rem, calc(1vw + 11rem), 13rem);
+  height: 3rem;
   background-color: #D9AD5B; 
   border: none;     
   border-radius: 25px;
   font-family: 'Quicksand';
-  font-size: 20px;
+  font-size: clamp(1rem, calc(1vw + 0.5rem), 1.25rem);
   color: white;             
-  margin: 7rem 0;
   transition: color 0.5s ease;
   text-transform: uppercase;
   cursor: pointer;
@@ -187,7 +202,7 @@
   left: 50%;
   width: 0%;
   height: 100%;
-  background-color: rgb(63, 63, 63);  
+  background-color: rgb(245, 245, 245);  
   transition: width 0.4s ease;
   transform: translate(-50%, -50%);
   z-index: 0;
@@ -222,5 +237,30 @@
   100% {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@media (max-width: 1024px) {
+  .HeroPage {
+    display: flex;
+    justify-content: center;
+    padding: 0 2rem;
+  }
+  
+  .my_img {
+    display: none;
+  }
+
+  .container {
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .button-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 1.5rem;
   }
 }
