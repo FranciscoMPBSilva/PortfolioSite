@@ -157,7 +157,6 @@ nav a.active{
   background: #D9AD5B;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #d39a31;
 }
