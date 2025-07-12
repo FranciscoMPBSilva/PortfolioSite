@@ -83,6 +83,7 @@ html {
 }
 
 .icons {
+  position: relative;
   display: flex;
   gap: 0.7rem;
   list-style: none;
@@ -100,6 +101,43 @@ html {
   text-decoration: none;
   font-size: 1.5rem;
   transition: transform 0.3s ease;
+}
+
+.icons a::after {
+  content: "";
+  color: white;
+  position: absolute;
+  font-size: 0.9rem;
+  font-family: 'Quicksand';
+  font-weight: 500;
+  bottom: -1.3rem;
+  transition: all 0.3s ease;
+  animation: fadeText 0.3s ease;
+  opacity: 0;
+}
+
+.icons .gh:hover::after {
+  content: 'GitHub';
+  opacity: 1;
+}
+
+.icons .ml:hover::after {
+  content: 'Gmail';
+  opacity: 1;
+}
+
+.icons .ld:hover::after {
+  content: 'LinkedIn';
+  opacity: 1;
+}
+
+@keyframes fadeText {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .icons a:hover {
@@ -137,6 +175,10 @@ html {
 
   .itens_nav ul {
     padding-top: 0.2rem;
+  }
+
+  .icons a::after {
+    font-size: 0.8rem;
   }
 }
 
