@@ -82,7 +82,7 @@
   width: max-content;
   display: flex;
   gap: 1.5rem;
-  animation: loop 8s linear infinite;
+  animation: loop 20s linear infinite;
 }
 
 .tag {
@@ -126,7 +126,7 @@
     width: max-content;
     display: flex;
     gap: 0.75rem;
-    animation: loop 15s linear infinite;
+    animation: loop 20s linear infinite;
   }
 }
 
@@ -148,7 +148,7 @@
     width: max-content;
     display: flex;
     gap: 0.5rem;
-    animation: loop 15s linear infinite;
+    animation: loop 20s linear infinite;
   }
 }
 

@@ -94,7 +94,7 @@ html {
   justify-content: center;  
   color: white;
   border: 1px solid white;
-  border-radius: 50%;            
+  border-radius: 100%;            
   width: 2.5rem;           
   height: 2.5rem;  
   text-decoration: none;
@@ -128,6 +128,16 @@ html {
   .right {
     gap: 3rem;
   }
+
+  .icons a {
+    width: 2rem;           
+    height: 2rem;
+    font-size: 1.2rem;
+  }
+
+  .itens_nav ul {
+    padding-top: 0.2rem;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -138,6 +148,16 @@ html {
   .right {
     gap: 2rem;
   }
+
+  .icons a {
+    width: 2rem;           
+    height: 2rem;
+    font-size: 1.2rem;
+  }
+
+  .itens_nav ul {
+    padding-top: 0.3rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -147,6 +167,16 @@ html {
 
   .right {
     gap: 2rem;
+  }
+
+  .icons a {
+    width: 2rem;           
+    height: 2rem;
+    font-size: 1.2rem;  
+  }
+
+  .itens_nav ul {
+    padding-top: 0.4rem;
   }
 }
 
