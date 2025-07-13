@@ -41,9 +41,11 @@ document.querySelector('.aboutmeButton').addEventListener('click', () => {
 });
 
 function updateScrollPadding() {
-  const navbar = document.querySelector(".navbar");
-  const height = navbar.offsetHeight;
-  document.documentElement.style.setProperty("--scroll-padding", height + "px");
+  if(window.innerWidth > 768) {
+    const navbar = document.querySelector(".navbar");
+    const height = navbar.offsetHeight;
+    document.documentElement.style.setProperty("--scroll-padding", height + "px");
+  }
 }
 
 window.addEventListener('load', updateScrollPadding);
