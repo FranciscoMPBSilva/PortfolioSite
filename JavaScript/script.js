@@ -1,6 +1,22 @@
 const sections = document.querySelectorAll("section");
 const navLinks = document.querySelectorAll(".nav-link");
 
+const showBtn = document.getElementById('show');
+const hideBtn = document.getElementById('hide');
+const navbar = document.querySelector('.navbar');
+
+showBtn.style.opacity = 1;
+
+showBtn.addEventListener('click', () => {
+  navbar.classList.add('active');
+  showBtn.style.opacity = 0;
+});
+
+hideBtn.addEventListener('click', () => {
+  navbar.classList.remove('active');
+  showBtn.style.opacity = 1;
+});
+
 window.addEventListener("scroll", () => {
   let currentSectionId = "";
 
