@@ -32,7 +32,7 @@ html {
 .navbar {
   position: fixed;
   width: 100%;
-  height: auto;
+  height: 10vh;
   min-height: 10vh;
   z-index: 1000;
   background-color: rgba(39, 39, 39, 0.9);
@@ -40,7 +40,6 @@ html {
   justify-content: space-between;
   align-items: center;
   padding: 0.9rem 4%;
-  border-bottom: 3px solid rgba(230, 230, 230, 0.199)
 }
 
 .itens_nav a::after {
@@ -219,14 +218,16 @@ html {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    width: 300px;
+    width: 49.5vw;
+    min-width: 220px;
+    max-width: 400px;
     height: 100%;
     border-right: 1px solid rgb(82, 82, 82);
     margin: 0;
     padding: 0;
     z-index: 1000;
     transition: all 0.3s ease;
-    left: -300px;
+    left: -500px;
   }
 
   .navbar.active {
@@ -234,8 +235,10 @@ html {
   }
 
   .left {
+    position: relative;
     display: flex;
     justify-content: row;
+    height: 10%;
   }
 
   .right {
@@ -268,6 +271,8 @@ html {
 
   .right .itens_nav ul{
     flex-direction: column;
+    padding-top: 5%;
+    gap: 0.5rem; 
   }
 
   .right .itens_nav li {
@@ -309,16 +314,17 @@ html {
   }
 
   .FS {
+    position: relative;
     color: #D9AD5B;
-    padding-left: 1.5rem;
-    padding-bottom: 3rem;
-    padding-top: 1rem;
+    padding-left: 2vh;
+    padding-top: 3.75vh;
+    font-size: clamp(1rem, calc(1vw + 0.5rem), 1.8rem);
   }
 
   .seta {
     display: block;
-    padding-left: 6rem;
-    padding-top: 0.75rem;
+    justify-self: right;
+    padding-top: 3vh;
     font-size: 2rem;
     color: white;
     transition: all 0.3s ease;
@@ -327,6 +333,17 @@ html {
 
   .seta:hover {
     color: #D9AD5B;
+  }
+
+  .left::after {
+    content: "";
+    width: 49.5vw;
+    min-width: 220px;
+    max-width: 400px;
+    height: 1px;
+    background-color: #D9AD5B;
+    position: absolute;
+    bottom: 0rem;
   }
 
   .menu-responsive {
