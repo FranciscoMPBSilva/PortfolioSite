@@ -41,7 +41,7 @@ document.querySelector('.aboutmeButton').addEventListener('click', () => {
 });
 
 function updateScrollPadding() {
-  if(window.innerWidth > 768) {
+  if(window.innerWidth > 1000) {
     const navbar = document.querySelector(".navbar");
     const height = navbar.offsetHeight;
     document.documentElement.style.setProperty("--scroll-padding", height + "px");

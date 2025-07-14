@@ -187,12 +187,12 @@
 
 @media (max-width : 800px) {
   .tag img {
-    width: 10vh; 
+    width: 7vh; 
     height: auto;
   }
 
   .tag-list {
-    width: 100vh;
+    max-width: 100%;
   }
 
   .inner {
