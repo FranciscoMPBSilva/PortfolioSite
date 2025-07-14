@@ -154,7 +154,7 @@
 
 @keyframes bounce {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(5px); }
+  50% { transform: translateY(0.7vh); }
 }
 
 .arrow {
@@ -183,11 +183,11 @@
 .aboutmeButton {
   position: relative;   
   overflow: hidden;   
-  width: clamp(13rem, calc(1vw + 11rem), 13rem);
-  height: 3rem;
+  width: clamp(15rem, calc(1vw + 15rem), 15rem);
+  height: 3.5rem;
   background-color: transparent; 
   border: 1.5px solid white;     
-  border-radius: 25px;
+  border-radius: 35px;
   font-family: 'Quicksand';
   font-size: clamp(1rem, calc(1vw + 0.5rem), 1.25rem);
   color: white;             
@@ -221,7 +221,7 @@
 
 .aboutmeButton:hover {
   color: white;
-  border-color: #D9AD5B;
+  border-color: #D9AD5B;  
   transform: scale(1.05);
   transition: transform 0.4s ease, color 0.4s ease;
 }
@@ -249,6 +249,69 @@
     padding-top: 20vh;
   }
 }
+
+@media (max-width: 1300px) {
+  .h2_apresentation {
+    font-size: clamp(1.65vh, calc(3vw + 0.5vh), 5vh);
+    color: white;
+  }
+
+  .h1_apresentation {
+    color: white;
+    font-size: clamp(3.5vh, calc(8vw + 1vh), 8vh);
+  }
+
+  .animbar {
+    width: 0.2vh;
+    height: clamp(3.5vh, calc(5vw + 1vh), 8vh);     
+  }
+
+  .container p {
+    font-size: clamp(2vh, calc(1vw + 0.5vh), 2vh);
+    margin: 1vh 0;
+    color: white;
+  }
+
+  .typewriter {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-out forwards;
+  }
+
+  .aboutmeButton { 
+    width: clamp(25vh, calc(6vw + 25vh), 25vh);
+    height: 7vh;
+    border: 0.1vh solid white;     
+    border-radius: 25vh;
+    font-size: clamp(2vh, calc(1vw + 0.5vh), 2vh);
+  }
+
+  .arrow {
+    font-size: clamp(1vh, calc(1vw + 1vh), 2vh);
+    color: white;
+  }
+
+  .underline {
+    position: absolute;
+    bottom: 0vh;
+    left: 50%;
+    width: 0;
+    height: 0.1vh;
+    background-color: #D9AD5B;
+    border-radius: 2px;
+    transition: width 0.4s ease, left 0.4s ease;
+    z-index: 0;
+  }
+
+  .discoverWrapper p {
+    padding-top: 4vh;
+  }
+
+  .discoverWrapper .arrow {
+    padding-top: 4vh;
+  }
+}
+
 
 @media (max-width: 1200px) {
   .my_img {
