@@ -3,7 +3,6 @@
   min-height: 100vh;
   padding-top: 2%;
   font-family: 'Quicksand';
-  width: 100%;
   position: relative;
   overflow: visible;
   background-color: #1f1f1f;
@@ -16,7 +15,6 @@
   max-width: 1500px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  
   position: relative;
   width: 100%;
   height: auto;
@@ -127,6 +125,7 @@
 
   .container-aboutme {
     grid-template-columns: repeat(1, 1fr);
+    max-width: 100%;
     gap: 5rem;
   }
 
@@ -154,7 +153,7 @@
 
   .container-aboutme {
     grid-template-columns: repeat(1, 1fr);
-    max-width: 500px;
+    max-width: 100%;
     gap: 5rem;
   }
 
@@ -204,7 +203,7 @@
 
   .container-aboutme {
     grid-template-columns: repeat(1, 1fr);
-    max-width: 400px;
+    max-width: 100%;
     gap: 5rem;
   }
 
@@ -225,17 +224,7 @@
   pointer-events: none;
 }
 
-@media (max-width : 400px) {
-  .container-aboutme {
-    max-width: 250px;
-  }
-}
 
-@media (max-width : 300px) {
-  .container-aboutme {
-    max-width: 125px;
-  }
-}
 
 @keyframes loop {
   0% {
