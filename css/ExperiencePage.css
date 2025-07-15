@@ -10,7 +10,7 @@
     background: linear-gradient(135deg, #D9AD5B 40%, #f0d094 100%);
     background-clip: text;
     color: transparent;
-    font-size: clamp(3vh, calc(3vw + 0.5rem), 5rem);
+    font-size: clamp(3vh, calc(4vw + 0.5rem), 5rem);
     display: flex;
     justify-content: center;
 }
@@ -44,16 +44,16 @@
     display: flex;
     flex-direction: column;
     background-color: #2c2c2c;
-    border-radius: 1rem;
+    border-radius: 0.2em;
     width: 100%;
-    padding: 5vh;
-    margin: 1vh;
+    padding: 5%;
+    margin: 1%;
     color: white;
     transition: all 0.3s ease;
 }
 
 .experience-item h3 {
-    font-size: clamp(2vh, calc(2vw + 0.5rem), 1.8rem);
+    font-size: clamp(2vh, calc(3vw + 1vh), 3.5vh);
     background: linear-gradient(135deg, #D9AD5B 50%, #ecd6ac 100%);
     background-clip: text;
     color: transparent;
@@ -63,20 +63,20 @@
 }
 
 .experience-item .experience-company{
-    font-size: clamp(1vh, calc(2vw + 0.5rem), 1.2rem);
+    font-size: clamp(1vh, calc(2vw + 0.5rem), 2vh);
     padding-bottom: 2vh;
     max-width: 100%;
     font-weight: 600;
 }
 
 .experience-item .experience-duration{
-    font-size: clamp(1vh, calc(2vw + 0.5rem), 0.9rem);
+    font-size: clamp(1vh, calc(2vw + 1vh), 1.5vh);
     padding-bottom: 2vh;
     max-width: 100%;
 }
 
 .experience-item .experience-description{
-    font-size: clamp(1vh, calc(2vw + 0.5rem), 1.5rem);
+    font-size: clamp(1vh, calc(2vw + 0.5rem), 1.75vh);
     padding-bottom: 2vh;
     max-width: 100%;
 }
@@ -85,4 +85,26 @@
     border: 0.1vh solid white;
     transform: scale(1.05);
     background-color: #333333;
+}
+
+@media (max-width: 1200px) {
+    .container-experience {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 5vh;
+    }
+
+    .experience-item {
+        margin: 2vh 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .container-experience {
+        grid-template-columns: repeat(1, 1fr);
+        padding: 5vh;
+    }
+
+    .experience-item {
+        margin: 2vh 0;
+    }
 }

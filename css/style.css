@@ -44,18 +44,20 @@ html {
 }
 
 .itens_nav a::after {
-  content: "";
-  position: absolute;
-  height: 0.1vh;
-  width: 0;
-  top: 2.5vh;
-  left: 0;
-  background-color: #D9AD5B;
-  transition: all 0.3s ease;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0.1vh;
+    background-color: #D9AD5B;
+    border-radius: 2px;
+    transition: width 0.4s ease, left 0.4s ease;   
 }
 
 .itens_nav a:hover::after {
-  width: 100%;
+    width: 100%;
+    left: 0;
 }
 
 .itens_nav a.active{
