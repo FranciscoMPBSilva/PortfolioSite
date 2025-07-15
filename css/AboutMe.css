@@ -29,6 +29,75 @@
   padding: 5rem;
 }
 
+.cv-button {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-top: 5vh;
+}
+
+.cv-button a {
+  text-decoration: none;
+}
+
+.download-cv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;   
+  overflow: hidden;   
+  width: clamp(15vh, calc(2vw + 15vh), 30vh);
+  height: 5vh;
+  background-color: #D9AD5B; 
+  border: 0.1vh solid #D9AD5B;     
+  border-radius: 0.2vh;
+  font-family: 'Quicksand';
+  font-size: clamp(1.5vh, calc(1vw + 0.5vh), 1.75vh);
+  color: white;
+  transition: all 0.5s ease;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+  transform: scale(1);
+}
+
+.download-cv:hover {
+  color: #ffffff;
+  border: 0.25vh solid white;
+  background-color: #d9ad5bf6;
+  transform: scale(1.05);
+  transition: transform 0.4s ease, color 0.4s ease;
+}
+
+.download-cv i {
+  font-size: clamp(1.5vh, calc(1vw + 0.5vh), 1.75vh);
+  color: white;
+  transition: color 0.4s ease;
+}
+
+.download-cv .dw-anim {
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+  padding-bottom: 7vh;
+}
+
+.download-cv:hover .dw-anim{
+  animation: change 0.75s;
+}
+
+@keyframes change {
+  0% { transform: translateY(0); } 
+  100% { transform: translateY(7vh); }
+}
+
+.download-cv span {
+  padding-right: 0.5vh;
+}
+
 .imgpc {
   width: 100%;
   height: auto;

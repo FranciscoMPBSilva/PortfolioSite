@@ -40,6 +40,10 @@ document.querySelector('.aboutmeButton').addEventListener('click', () => {
   document.querySelector('#aboutme').scrollIntoView({ behavior: 'smooth' });
 });
 
+document.querySelector('.discoverWrapper').addEventListener('click', () => {
+  document.querySelector('#project').scrollIntoView({ behavior: 'smooth' });
+});
+
 function updateScrollPadding() {
   if(window.innerWidth > 1000) {
     const navbar = document.querySelector(".navbar");
