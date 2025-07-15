@@ -71,7 +71,7 @@
   animation:
     typing 1.5s steps(50, end) forwards,
     blink-caret .75s step-end infinite;
-  animation-delay: 1.5s;
+  animation-delay: 1s;
 }
 
 @keyframes typing {
