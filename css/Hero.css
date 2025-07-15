@@ -1,5 +1,5 @@
 .HeroPage {
-  min-height: 110vh;
+  min-height: 109vh;
   /*background-color: #1f1f1f;*/
   width: 100%;
   position: relative;
@@ -67,14 +67,17 @@
   display: inline-block;
   overflow: hidden;   
   white-space: nowrap;
+  opacity: 0;
   animation:
-    typing 1.5s steps(50, end),
+    typing 1.5s steps(50, end) forwards,
     blink-caret .75s step-end infinite;
+  animation-delay: 1.5s;
 }
 
 @keyframes typing {
   from { width: 0; }
-  to { width: 100%; }
+  to { width: 100%; 
+       opacity: 1;}
 }
 
 @keyframes blink-caret {
@@ -104,9 +107,10 @@
 
 .my_img {
   max-width: 100%;
-  height: auto;
+  height: 550px;
   align-self: center;
   justify-self: center;
+  border-radius: 0.5vh;
   z-index: 0;
 }
 
@@ -243,10 +247,20 @@
   }
 }
 
+@media (max-width: 1700px) {
+  .my_img {
+    height: 450px;
+  }
+}
+
 @media (max-width: 1500px) {
   .hero_container {
     max-width: 1100px;
     padding-top: 20vh;
+  }
+
+  .my_img {
+    height: 400px;
   }
 }
 
@@ -304,11 +318,15 @@
   }
 
   .discoverWrapper p {
-    padding-top: 4vh;
+    padding-top: 0vh;
   }
 
   .discoverWrapper .arrow {
-    padding-top: 4vh;
+    padding-top: 0vh;
+  }
+
+  .my_img {
+    height: 350px;
   }
 }
 
