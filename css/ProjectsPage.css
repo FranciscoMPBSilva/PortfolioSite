@@ -140,6 +140,10 @@
         padding: 5vh;
     }
 
+    .projectsTitle {
+        font-size: clamp(3vh, calc(2vw + 0.5rem), 3rem);
+    }
+
     .project-item {
         margin: 2vh 0;
     }
