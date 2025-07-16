@@ -355,15 +355,15 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f0f0f0;
+  background: hsl(228, 4%, 15%);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #D9AD5B;
+  background: hsl(228, 4%, 25%);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #d39a31;
+  background: hsl(228, 4%, 35%);
 }
 
 
