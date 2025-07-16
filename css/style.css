@@ -36,7 +36,8 @@ html {
   height: 10vh;
   min-height: 8vh;
   z-index: 1000;
-  background-color: rgba(39, 39, 39, 0.9);
+  background-color: hsla(220, 7%, 8%, 0.795);
+  backdrop-filter: blur(5px);
   display: flex;
   justify-content: space-between;
   align-items: center;

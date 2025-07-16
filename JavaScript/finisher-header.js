@@ -16,13 +16,13 @@ new FinisherHeader({
         }
     },
     "colors": {
-        "background": "#1f1f1f",
+        "background": "#121416",
         "particles": [
         "#d9ad5b",
-        "#1f1f1f",
-        "#1f1f1f",
-        "#1f1f1f",
-        "#1f1f1f"
+        "#121416",
+        "#121416",
+        "#121416",
+        "#121416"
         ]
     },
     "blending": "overlay",
