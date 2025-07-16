@@ -136,8 +136,9 @@
 
 @media (max-width: 768px) {
     .container-projects {
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(1, 325px);
         padding: 5vh;
+        justify-content: center;
     }
 
     .projectsTitle {
